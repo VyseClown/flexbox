@@ -6,8 +6,19 @@ html,body,#app{
 #app{
  display:flex;
  flex-direction: row;
- align-items: flex-start;
- justify-content: flex-start;
+ align-items: center;/*align items sempre impactará a direção
+                    dependendo do flex direction, se for row,
+                    (items na horizontal) align items alinha 
+                    na vertical, se for column, alinha na horizontal
+                    Column->Items na vertical->Align-Items afeta no X
+                    Row->Items na horizontal->Align-Items afeta no Y*/
+ justify-content: flex-start;/*Afeta junto da flex-direction
+                            Column->Items na vertical->Afeta onde estarão os items no Y
+                            Row->Items na horizontal->Afeta onde estarão os items no X
+                            Podemos usar space-around, space-between*/  
+ flex-wrap:wrap;/*irá quebrar a linha caso não tenha espaço suficiente*/
+ align-content:center;/*alinhar quando a linha estiver quebrada!
+                        tendo as mesmas propriedades que o justify-content*/
 }
 
 .box{
@@ -15,4 +26,7 @@ html,body,#app{
     height:60px;
     background:#f00;
     margin:5px;
+    /*flex-grow:1; o elemento aceita(1) ou não(0) ser aumentado para caber no elemento pai*/
+    /*flex-shrink: 1; o elemento aceita(1) ou não(0) ser diminuido*/
+    /*flex: 1; junção do flex-grow e flex-shrink, podendo ser 1 1 ou apenas 1*/
 }
