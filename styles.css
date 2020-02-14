@@ -24,9 +24,22 @@ html,body,#app{
 .box{
     width:60px;
     height:60px;
-    background:#f00;
     margin:5px;
     /*flex-grow:1; o elemento aceita(1) ou não(0) ser aumentado para caber no elemento pai*/
     /*flex-shrink: 1; o elemento aceita(1) ou não(0) ser diminuido*/
     /*flex: 1; junção do flex-grow e flex-shrink, podendo ser 1 1 ou apenas 1*/
+}
+.red{
+    order:1;    
+    background:#f00;
+}
+
+.green{
+    order:2;
+    background:#0f0;
+
+}
+.blue{
+    order:3;
+    background:#00f;
 }
